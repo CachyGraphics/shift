@@ -1,0 +1,140 @@
+@import url(font/font.css);
+@import url(google.css);
+ * {
+	border: 0;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	outline: none;
+}
+.cellparent {
+	display: table;
+	width: 100%;
+	box-sizing: border-box;
+}
+.cellparent > * {
+	display: table-cell;
+}
+.wrapParent {
+	position: relative;
+}
+.wrapParent > div {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+}
+html,
+body {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: transparent;
+	font-family: 'Roboto';
+	overflow: hidden;
+	font-size: 11pt;
+}
+body {
+	padding: 20px;
+	-webkit-user-select: none;
+}
+#wrapper {
+	background-color: #f9f9f9;
+	box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.2), 0 8px 17px 0 rgba(0, 0, 0, 0.2);
+	padding: 20px;
+}
+#header {
+	margin: -20px -20px 0 -20px;
+	height: 30px;
+	width: calc(100% + 40px);
+	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
+}
+#header > * {
+	position: relative;
+	z-index: 2;
+}
+#title {
+	padding: 10px;
+	-webkit-app-region: drag;
+	font-size: 12pt;
+	font-weight: bold;
+}
+#close,
+.closer,
+#minim,
+.minimizer {
+	-webkit-transition: all 0.3s ease-out;
+}
+#close,
+#minim {
+	width: 40px;
+	padding: 5px 10px 0 10px;
+	pointer-events: all;
+	vertical-align: middle;
+	text-align: center;
+}
+#close:hover,
+#minim:hover {
+	background-color: #397ff3;
+}
+.closer,
+.minimizer {
+	fill: #397ff3;
+}
+#close:hover .closer,
+#minim:hover .minimizer {
+	fill: #ffffff;
+}
+#logo {
+	width: 20px;
+	height: 20px;
+	margin-bottom: -5px;
+	display: inline;
+}
+.logo {
+	fill: rgb(0, 0, 0);
+}
+#content {
+	margin-top: 20px;
+	background: url(img/loading.svg) no-repeat center center;
+	background-size: contain;
+	-webkit-transition: all 0.3s ease-out;
+	width: 100%;
+}
+label {
+	font-size: 10pt;
+	color: #888;
+	display: block;
+}
+#idd {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	margin: 5px 0 0 0;
+	font-size: 12pt;
+	padding: 5px 10px;
+	text-align: center;
+	background: transparent;
+	background: #fff;
+	font-family: 'Roboto';
+	letter-spacing: 1pt;
+	border: 1px solid #ccc;
+	-webkit-transition: all 0.3s ease-out;
+}
+#idd:focus {
+	border: 1px solid #397ff3;
+}
+.button {
+	margin-top:15px;
+	-webkit-transition: background-color 0.3s ease-out;
+	-webkit-transition: color 0.3s ease-out;
+	position:relative;
+	right:0;
+}
+.button:active {
+	background-color:rgb(57, 127, 243);
+	color:#fff;
+}

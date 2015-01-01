@@ -1,0 +1,19 @@
+{
+	"name": "shift",
+	"main": "index.html",
+	"window": {
+		"toolbar": false,
+		"frame": false,
+		"icon": "icon.png",
+		"resizable": false,
+		"position": "center",
+		"transparent": true,
+		"show_in_taskbar": true
+	},
+	"webkit": {
+		"plugin": true
+	},
+	"scripts": {
+		"start": "nodewebkit"
+	}
+}
