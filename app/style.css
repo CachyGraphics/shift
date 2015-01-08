@@ -50,6 +50,7 @@ body {
 	margin: -20px -20px 0 -20px;
 	height: 30px;
 	width: calc(100% + 40px);
+	background: #fff;
 	box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.2);
 }
 #header > * {
@@ -109,7 +110,7 @@ label {
 	color: #888;
 	display: block;
 }
-#idd {
+.idd {
 	display: block;
 	box-sizing: border-box;
 	width: 100%;
@@ -117,24 +118,24 @@ label {
 	font-size: 12pt;
 	padding: 5px 10px;
 	text-align: center;
-	background: transparent;
 	background: #fff;
 	font-family: 'Roboto';
-	letter-spacing: 1pt;
+	letter-spacing: 0.5pt;
+	font-weight: bold;
 	border: 1px solid #ccc;
 	-webkit-transition: all 0.3s ease-out;
 }
-#idd:focus {
+.idd:focus {
 	border: 1px solid #397ff3;
 }
 .button {
-	margin-top:15px;
-	-webkit-transition: background-color 0.3s ease-out;
-	-webkit-transition: color 0.3s ease-out;
-	position:relative;
-	right:0;
+	margin-top: 15px;
+	position: relative;
+	right: 0;
+	background-color: #397ff3;
+	color: #fff;
 }
-.button:active {
-	background-color:rgb(57, 127, 243);
-	color:#fff;
+
+.button:focus {
+	background-color: #264d8e;
 }

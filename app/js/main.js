@@ -2,6 +2,10 @@ var gui = require('nw.gui');
 var win = gui.Window.get();
 var exec = require('child_process').exec;
 
+global.handler = win;
+
+//win.showDevTools();
+
 //exec("node createwsserver", function (error, stdout, stderr) {
 //    
 //});
@@ -74,38 +78,7 @@ function loadingFinish() {
 	mask.height = hh;
 	mask.x = 0;
 	mask.y = 0;
-	
+	global.blank = mask;
 }
 
 $("#idd").focus();
-
-//---- Shortcut functions
-
-var option = {
-	key: "Ctrl+Shift+Z",
-	active: function () {
-		win.show();
-		mask.close();
-	},
-	failed: function (msg) {
-		// :(, fail to register the |key| or couldn't parse the |key|.
-		console.log(msg);
-	}
-};
-var shortcut1 = new gui.Shortcut(option);
-gui.App.registerGlobalHotKey(shortcut1);
-
-var option = {
-	key: "Alt+F4",
-	active: function () {
-		return
-	},
-	failed: function (msg) {
-		// :(, fail to register the |key| or couldn't parse the |key|.
-		console.log(msg);
-	}
-};
-var shortcut2 = new gui.Shortcut(option);
-gui.App.registerGlobalHotKey(shortcut2);
-
-//---- Shortcut functions end
